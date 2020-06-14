@@ -1,0 +1,178 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Rishi Shah 
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage{xcolor}
+\usepackage[normalem]{ulem}
+\usepackage{hyperref}
+\hypersetup{colorlinks,urlcolor=blue}
+
+
+
+\makeatletter
+\DeclareUrlCommand\ULurl@@{%
+  \def\UrlFont{\ttfamily\color{blue}}%
+  \def\UrlLeft{\uline\bgroup}%
+  \def\UrlRight{\egroup}}
+\def\ULurl@#1{\hyper@linkurl{\ULurl@@{#1}}{#1}}
+\DeclareRobustCommand*\ULurl{\hyper@normalise\ULurl@}
+\makeatother
+
+
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Jai Kumar Dewani} % Your name
+%\address{123 Pleasant Lane \\ City, State 12345} % Your secondary addess (optional)
+\address{ 
+\href{https://www.linkedin.com/in/jai-dewani}{LinkedIn\textbackslash jai-dewani} \\ 
+\href{https://github.com/jai-dewani/}{GitHub\textbackslash jai-dewani} \\
+\href{mailto:jai.dewani.99@gmail.com}{jai.dewani.99@gmail.com} \\
+\href{https:blogs.jaid.tech}{Blogs} \\
+\href{https://www.codechef.com/users/jai_dewani}{CodeChef}
+} % Your phone number and email
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\newcommand\myshade{85}
+
+\begin{rSection}{Education}
+
+{\bf International Institute of Information Technology, Naya Raipur}  \\
+Bachelor of Technology \hfill {\em August 2017 - Present}
+\\
+Computer Science and Engineering \hfill{CGPA:7.54 (till $5^{th}$ Semester) }
+
+{\bf Holy Cross Byron Bazar, Raipur} \hfill {\em July 2015 - May 2017} \\
+Class XII, AISSCE, CBSE(Science)\hfill {Percentage:85.0} 
+
+{\bf Holy Cross Byron Bazar, Raipur} \hfill {\em July 2003 - May 2015} \\ 
+Class X, AISSCE, CBSE\hfill {Percentage:83.6}
+\end{rSection}
+%--------------------------------------------------------------------------------
+%    Projects And Seminars
+%-----------------------------------------------------------------------------------------------
+\begin{rSection}{Work Experience}
+
+\begin{rSubsection}{Directi, Naya Raipur}{May 2019 - June 2019}{Workshop Trainer Intern}{}
+\item Worked as a trainer and taught 18 school students
+about programming in CodeChef Summer Camp
+\item Started with recognizing algorithms and introducted the idea of programming later within 2 weeks
+\end{rSubsection}
+
+
+\end{rSection}
+
+
+\begin{rSection}{Projects}
+ 
+{\bf Neural Net Visualiser}  |  \href{https://visualize-neural-network.herokuapp.com/}{ \em WebApp}
+\hfill{\bf \em June 2020}
+\\ Tech Stack {\em Tensorflow, Flask, Streamlit} 
+\\ Created a visualizer with using streamlit to show the hidden layers trained on MNIST dataset with 3 layers. Used Flask for backend.  Hosted the backend and frontend on Heroku to be accessible for everyone
+
+\smallskip
+
+{\bf Lab Works} |  \href{https://github.com/jai-dewani/Lab-Works}{ \em GitHub} 
+\hfill{\bf \em Spring 2019}
+\\ Tech Stack: {\em HTML, CSS, Js, Bootstrap, Django, SQLite}
+\\ The project aims was to build to ease lab evaluation in programming labs. Used JDoodle’s API to compile programs written by students and checks them against predefined input for expected output.
+\smallskip
+
+{\bf YelpCamp}  |  \href{https://github.com/jai-dewani/YelpCamp}{ \em GitHub}
+\hfill{\bf \em Autumn 2018}
+\\ Tech Stack {\em HTML, CSS, Js, Node.js, Express, passport, MongoDB} 
+\\ Created a full fledged website where users can post details about different campgrounds edit and delete the same. They can comment on campgrounds, edit and delete them. 
+
+
+
+
+
+
+
+\end{rSection}
+%----------------------------------------------------------------------------------------
+%	TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Technical Strengths}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{2ex}} l }
+Programming Languages \ & Python{\em (for programming \& development)}, JavaScript and C\\
+Framework \& Libraries  & Django, Bootstrap, Node.js, Express and passport \\
+Software \& Tools &  Heroku, MS Excel, Latex, Git \& Github\\
+
+\end{tabular}
+
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+
+
+
+%	EXAMPLE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Academic Achievements \& Extra-Curricular} 
+
+\begin{rSubsection}{}{}{}{}
+\item Ranked {\bf 1127th globally} from 10724 teams participating in {\bf Google HashCode}, {\bf 115th in India}.
+
+\item {\bf Qualified} for Kanpur \& Gwalior regions in {\bf ACM-ICPC 2020} with  63 rank in Kanpur region
+
+
+\item {\bf Qualified} for Kharagpur \& Amritapuri regions in {\bf ACM-ICPC 2019} with rank 81 and 37 respectively 
+
+\item Cleared {\bf Foundation level in CCDSAP Certification} by CodeChef 
+
+\item {\bf Head} of {\bf The Society of Coders} (TSoC) at IIIT Naya Raipur
+
+
+\item Recipient of {\bf Google India Scholarships 2017 Phase-1} under Udacity Nanodegree program
+
+\item Qualified in {\bf CodeChef's Snackdown with a rank of 2587 out of 27875} registered teams 
+\item Ranked {\bf 3rd in Codeutsava 2020}, NIT Raipur’s Annual Hackathon out of 30 participating teams
+
+\item Co-Organized “Drink'N'Code” - a fun event to promote competitive programming in September 2019
+
+
+
+\end{rSubsection}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% Extra Curricular
+%----------------------------------------------------------------------------------------
+
+
+
+
+\end{document}

@@ -1,0 +1,165 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Rishi Shah 
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage{xcolor}
+\usepackage[normalem]{ulem}
+\usepackage{hyperref}
+\hypersetup{colorlinks,urlcolor=blue}
+
+
+
+\makeatletter
+\DeclareUrlCommand\ULurl@@{%
+  \def\UrlFont{\ttfamily\color{blue}}%
+  \def\UrlLeft{\uline\bgroup}%
+  \def\UrlRight{\egroup}}
+\def\ULurl@#1{\hyper@linkurl{\ULurl@@{#1}}{#1}}
+\DeclareRobustCommand*\ULurl{\hyper@normalise\ULurl@}
+\makeatother
+
+
+\usepackage[left=0.75in,top=0.55in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Jai Kumar Dewani} % Your name
+%\address{123 Pleasant Lane \\ City, State 12345} % Your secondary addess (optional)
+\address{ 
+\href{https://www.linkedin.com/in/jai-dewani}{LinkedIn\textbackslash jai-dewani} \\ 
+\href{https://github.com/jai-dewani/}{GitHub\textbackslash jai-dewani} \\
+\href{mailto:jai.dewani.99@gmail.com}{jai.dewani.99@gmail.com} \\
+\href{https:blogs.jaid.tech}{Blogs} \\
+\href{https://www.codechef.com/users/jai_dewani}{CodeChef}
+} % Your phone number and email
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\newcommand\myshade{85}
+\vspace{-0.4cm}
+\begin{rSection}{Education}
+
+{\bf International Institute of Information Technology, Naya Raipur}  \\
+Bachelor of Technology \hfill {\em \textbf{August 2017 - Present}}
+\\
+Computer Science and Engineering \hfill{CGPA: 7.54 (till $5^{th}$ Semester) }
+
+\vspace{-0.15cm}
+{\bf Holy Cross Byron Bazar, Raipur} \hfill {\em \textbf{July 2015 - May 2017}} \\
+Class XII, AISSCE, CBSE(Science)\hfill {Percentage: 85.0} 
+
+\vspace{-0.15cm}
+{\bf Holy Cross Byron Bazar, Raipur} \hfill {\em \textbf{July 2003 - May 2015}} \\ 
+Class X, AISSCE, CBSE\hfill {Percentage: 83.6}
+\end{rSection}
+%--------------------------------------------------------------------------------
+%    Projects And Seminars
+%-----------------------------------------------------------------------------------------------
+\vspace{-0.3cm}
+\begin{rSection}{Work Experience}
+
+\begin{rSubsection}{Directi, Naya Raipur}{\textbf{\textit{Workshop Trainer Intern (May '19-June '19)}}}{}\\
+\vspace{-0.4em}
+Trained 18 school students about Python programming using code visualization techniques in the Codechef sponsored summer camp of 2 weeks, learned and improved upon various pedagogy techniques.
+
+{\textbf{The Society of Coders(TSoC), IIIT-Naya Raipur}}\hfill{\textbf{\textit{2018}}}{}\\
+Co-founded the first coder's club at IIIT-NR, organized various hackathons and events to promote competitive programming among the students, and improve the coding environment of the Institute.
+\end{rSubsection}
+
+\end{rSection}
+
+\vspace{-0.45cm}
+\begin{rSection}{Projects}
+ 
+{\bf DeepNeural Net Visualiser}  |  \href{https://visualize-neural-network.herokuapp.com/}{ \em WebApp}
+\hfill{\bf \em June 2020}
+\\ Created a Neural Net Visualiser and trained it on the MNIST database which helps in visualizing the hidden layers(three). Used Streamlit to create a clean frontend to update the model layer by layer post result generation and hosted the project on Heroku. \hfill[Tech Stack: {\em Tensorflow, Flask, Streamlit}]
+
+{\bf FunMark}  |  \href{https://github.com/jai-dewani/fun-mark}{\em GitHub}
+\hfill{\bf \em May 2020}
+\\ Created an easy to use python package for benchmarking functions. It allows for graphical comparisons. Released it on PyPi package manager for smooth installation. More about FunMark on my \href{https://blogs.jaid.tech/fun-mark/}{blog}.
+
+{\bf Lab Works} |  \href{https://github.com/jai-dewani/Lab-Works}{ \em GitHub} 
+\hfill{\bf \em April 2019}
+\\ An application made to ease the lab assessments for technical institutes. Enabled users to create coding questions and add test cases. Used JDoodle’s API to compile student's programs and check them against predefined input.\hfill[Tech Stack: {\em HTML, CSS, Js, Bootstrap, Django, SQLite}]
+
+
+{\bf YelpCamp}  |  \href{https://github.com/jai-dewani/YelpCamp}{ \em GitHub}
+\hfill{\bf \em August 2018}\\
+Created a social website where for hikers to view different camps. Enabled CRUD functionalities to create, edit \& delete posts. Used MongoDB for the backend. Used Passport for authenticated logins and sign-ups to the platform.\hfill[Tech Stack:{\em HTML, CSS, Js, Node.js, Express, Passport, MongoDB} ]
+\end{rSection}
+%----------------------------------------------------------------------------------------
+%	TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+\vspace{-0.35cm}
+\begin{rSection}{Technical Skills}
+\vspace{-0.175cm}
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{2ex}} l }
+Programming Languages \ & Python{\em (for programming \& development)}, JavaScript, C\\
+Framework \& Libraries  & Django, Bootstrap, Node.js, Express, Passport \\
+Software \& Tools &  Heroku, MS-Excel, Latex, Git, Github\\
+\end{tabular}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+
+
+
+%	EXAMPLE SECTION
+%----------------------------------------------------------------------------------------
+\vspace{-0.25cm}
+\begin{rSection}{Academic Achievements \& Extra-Curricular} 
+\vspace{-0.475cm}
+\begin{rSubsection}{}{}{}{}
+\item Ranked \textbf{1127\textsuperscript{th}} globally and \textbf{115\textsuperscript{th}} in India in Google HashCode, out of 10724 teams.
+
+\item Qualified ACM-ICPC 2020 in Kanpur(\textbf{rank 63}) and Gwalior regions.
+
+\item Qualified ACM-ICPC 2019 in Kharagpur(\textbf{rank 81}) and Amritapuri(\textbf{rank 37}) regions.
+
+\item Succesfully cleared the Foundation level in \textbf{CCDSAP Certificaton} by CodeChef.
+
+\item Recipient of {\bf Google India Challenge Scholarship '17 Phase-1} under Udacity Nanodegree program
+
+\item Qualified CodeChef's Snackdown with a rank of \textbf{2587} out of 27875 teams 
+
+\item Ranked {\bf 3\textsuperscript{rd} in Codeutsava 2020}, NIT Raipur’s Annual Hackathon out of 30 participating teams
+
+
+\end{rSubsection}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% Extra Curricular
+%----------------------------------------------------------------------------------------
+
+
+
+
+\end{document}

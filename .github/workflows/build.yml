@@ -1,0 +1,33 @@
+name: Compile and Upload Resume PDF
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '*.pdf'
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    container:
+      image: danteev/texlive:latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: resume.tex
+          
+      - uses: actions/upload-artifact@v2
+        with:
+          name: PDF
+          path: resume.pdf
+          
+      - name: Deploy 🚀
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          publish_dir: ./build

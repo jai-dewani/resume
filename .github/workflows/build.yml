@@ -30,6 +30,6 @@ jobs:
         run: git add resume.pdf
       
       - name: Commit & Push changes
-        uses: actions-js/push@master
+        uses: actions-js/push@main
         with:
           github_token: ${{ secrets.PERSONAL_TOKEN }}

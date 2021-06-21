@@ -20,14 +20,16 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: resume.tex
-          
+        
       - uses: actions/upload-artifact@v2
         with:
           name: PDF
           path: resume.pdf
           
-      - name: Deploy 🚀
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Git add
+        run: git add resume.pdf
+      
+      - name: Commit & Push changes
+        uses: actions-js/push@master
         with:
-          personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          publish_dir: ./build
+          github_token: ${{ secrets.PERSONAL_TOKEN }}

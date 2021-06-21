@@ -21,15 +21,19 @@ jobs:
         with:
           root_file: resume.tex
         
-      - uses: actions/upload-artifact@v2
-        with:
-          name: PDF
-          path: resume.pdf
+      - name: Post Processing 
+        run: |
+          mkdir build 
+          cp *.pdf build/ 
+          cp index.html build/
           
       - name: Git add
         run: git add resume.pdf
       
-      - name: Commit & Push changes
-        uses: actions-js/push@master
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-          github_token: ${{ secrets.PERSONAL_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: build
+          CLEAN: true

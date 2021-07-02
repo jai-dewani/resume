@@ -1,6 +1,6 @@
 # Resume
 A repository containing my latex file with github-actions set to create a PDF and push it to `gh-pages` branch which is then hosted so I can easily update my inforamtionin in latex, push the changes and expect my updates to be reflected in the hosted version of this repo.  
-You can check it out here [https://jai-dewani.github.io/resume/](https://jai-dewani.github.io/resume/)
+You can check it out here [jai-dewani.github.io/resume](https://jai-dewani.github.io/resume/)
 
 ### Special mention 
 - Thanks to [@ronaksakhuja](https://github.com/ronaksakhuja) and [@rajivnayanc](https://github.com/rajivnayanc) for sharing their [@ronaksakhuja/resume](https://github.com/ronaksakhuja/resume) repositories for giving me an idea how I can create a action for compling the latex file to generate the PDF on the fly on every update (makes my life so easy) 

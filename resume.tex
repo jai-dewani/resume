@@ -116,8 +116,8 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\justify \begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeItemListStart}{\justify \begin{itemize} \vspace{-4pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-1pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -150,36 +150,27 @@
     \resumeSubheading
       {Carl Zeiss}{July '21 -- Present}
       {Software Engineer}{Bengaluru, Karnataka, India}
-      \vspace{-7pt}
+      \vspace{-9pt}
       \resumeItemListStart
-        % \resumeItem{Lead the development of a crucial segment of the product after KT to the end of first product release}
-        % \resumeItem{Worked on refining existing APIs built using ASP.NET}
-        \resumeItem{Streamlined development for the whole team to reduce physical device dependency by mocking system endpoints}
-        \resumeItem{Worked with to enhance existing in time asynchronous notifications}
-        \resumeItem{Resolved bugs related to preview area and rendering of Visual Acuity and Chart Layouts in Chart Viewer}
-        \resumeItem{Introduced new features and improved existing bugs like black masking, preview area for Charts built on WPF}
-        \resumeItem{Worked with the UI team to optimise usage of chartviewer by making sure only atomic operations are exposed and utilized}
-        % \resumeItem{Worked on ensuring video streaming uses https   service while minimizing computational load on system}
+        \resumeItem{Led the development of the critical Chart Viewer segment, successfully driving it to the market for the product release}
+        \resumeItem{Collaborated with the team to optimize Chart Viewer usage, ensuring exposure and utilization of only atomic operations}
+        \resumeItem{Optimized workflows by restructuring into asynchronous tasks and notifications for improved efficiency}
+        % \resumeItem{Resolved bugs related to preview area and rendering of Visual Acuity and Chart Layouts in Chart Viewer, built on WPF}
+        \resumeItem{Introduced new features based on customer feedback, including the addition of black masking and enhancements to existing functionalities.}
+        \resumeItem{Enhanced team agility through streamlined development by introducing hardware behavior mocking, reducing device dependency for more efficient testing and debugging}
       \resumeItemListEnd
 
+    \vspace{3pt}
+    
     \resumeSubheading
       {Carl Zeiss}{January '21 -- June '21}
       {FullStack Intern}{Bengaluru, Karnataka, India}
-      \vspace{-7pt}
+      \vspace{-9pt}
       \resumeItemListStart
-        \resumeItem{Implemented new methods, which were exposed as APIs using .NET framework to be utilised by frontend}
-        \resumeItem{Created and deployed new gRPC servers for reducing coupling and introduce IPC channels for various services}
-        \resumeItem{Utilized NUnit and Fluent Assertions for writing new unit test cases  improving overall development cycle   }
+        \resumeItem{Coordinated with cross-functional teams to define and integrate API requirements seamlessly}
+        \resumeItem{Designed IPC channels and deployed gRPC servers to reduce coupling for enhanced communication among services}
+        \resumeItem{Utilized NUnit and Fluent Assertions to develop new unit tests, enhancing the overall development cycle}
       \resumeItemListEnd
-
-    % \resumeSubheading
-    %   {Directi}{May ’19 -- June ’19}
-    %   {Workshop Trainer Intern}{Naya Raipur, Chattisghar, India}
-    %   \vspace{-7pt}
-    %   \resumeItemListStart
-    %     \resumeItem{Trained  18  school  students  about  Python  programming  using  code  visualization  techniques  in  CodeChef sponsored summer camp of 2 weeks}
-    %     \resumeItem{Learned and improved upon various pedagogy techniques while improving the course content}
-    % \resumeItemListEnd
     
   \resumeSubHeadingListEnd
 
@@ -193,37 +184,30 @@
 
 %-----------PROJECTS-----------
 \section{Projects}
-    \vspace{-5pt}
+    \vspace{-2pt}
     \resumeSubHeadingListStart
         \resumeProjectHeading
-            {\textbf{Meme Generator} $|$ \emph{JavaScript, React}  $|$ \href{https://jai-dewani.github.io/Meme-App/}{WebApp}}{September 2020}
+            {\textbf{VISUCORE 500} $|$ \emph{C\#, Angular}  $|$ \href{https://www.zeiss.com/vision-care/int/eye-care-professionals/equipment/refraction/combined-refraction-unit.html}{Zeiss VISUCORE 500}}{Jan 2021 - Current}
             \resumeItemListStart
-                \resumeItem{Designed an easy to use single page application for creating memes}
-                \resumeItem{Used KonvaJS for Canvas display logic for presenting editable images for users to add and drag text over to create memes}
-                \resumeItem{Built features for the ease of downloading memes and upload custom images for your custom memes}
+                \resumeItem{Enhanced ChartViewer, a visual acuity testing desktop app}
+                \resumeItem{Collaborated with German team to enhance and transfer Refraction module}
+                \resumeItem{Decomposed monolithic project into 3 gRPC-based services to minimize coupling}
+                % \resumeItem{}
+                % \resumeItem{Mastered end-to-end product life cycle and Agile methodologies}
             \resumeItemListEnd
         \resumeProjectHeading
-            {\textbf{DeepNeural Net Visualiser} $|$ \emph{Tensorflow, Flask, Streamlit} $|$ \href{https://visualize-neural-network.herokuapp.com/}{WebApp}}{June 2020} 
+            {\textbf{VISUSCREEN 100/500} $|$ \emph{C\#, HTML, CSS, JS}  $|$ \href{https://www.zeiss.com/vision-care/int/eye-care-professionals/equipment/refraction/subjective-refraction-unit.html}{Zeiss VISUSCREEN 100/500}}{June 2023 - August 2023}
             \resumeItemListStart
-                \resumeItem{Built a webapp for easier visualisation of hidden layers in a Neural Net in real-time}
-                \resumeItem{Utilised Streamlit to create a clean frontend design to update the model layer by layer}
-                \resumeItem{Deployed the project on free-tier Heroku service to be easily accessible by anyone}
-            \resumeItemListEnd 
+                \resumeItem{Implemented a lock and release mechanism to ensure a maximum of one connection to critical communication channels, ensuring system stability}
+                \resumeItem{Produced comprehensive system software integration documentation to facilitate the seamless release of software changes into the market}
+                \resumeItem{Mastered end-to-end product life cycle and Agile methodologies}
+            \resumeItemListEnd
         \resumeProjectHeading
             {\textbf{FunMark} $|$ \emph{Python} $|$ \href{https://github.com/jai-dewani/fun-mark}{GitHub}}{May 2020} 
             \resumeItemListStart
                 \resumeItem{Developed a wrapper library for bench-marking different functions and allowing creation of graphical comparisons}
                 \resumeItem{Released on PyPi package manager to be easily accessible with pip with currently over 2K downloads}
                 \resumeItem{Wrote a blog on how to utilise the library efficiently -  \href{https://jai-dewani.github.io/blogs/fun-mark/}{jai-dewani.github.io/blogs/fun-mark/}}
-            \resumeItemListEnd 
-        \resumeProjectHeading
-            {\textbf{Lab Works} $|$ \emph{HTML, CSS, Js, Bootstrap, Django, SQLite} $|$ \href{https://github.com/jai-dewani/Lab-Works}{GitHub}}{April 2019} 
-            \resumeItemListStart
-                \resumeItem{Built a web platform to ease the lab assessments for technical courses involving standard coding problems }
-                \resumeItem{Devised a solution regarding issues with the manual process of lab assistants checking each submission manually}
-                \resumeItem{Used 3rd party API which provides a safe enviroment to compile and run code while supporting wide range programming languages}
-                % \resumeItem{Enabled  Professors to  create coding questions and add test cases.}
-                % \resumeItem{Used JDoodle’s API to compile student’s programs and check them against predefined test cases.}
             \resumeItemListEnd 
     \resumeSubHeadingListEnd
 
@@ -235,9 +219,9 @@
     {\item{
      \textbf{Languages}{: C\#, Python, JavaScript} \\
      \vspace{1pt}
-     \textbf{Developer Tools}{: Heroku, Git, GitHub, Adobe Illustrator, CI/CD} \\
+     \textbf{Developer Tools}{: Azure, Git, GitHub, CI/CD} \\
      \vspace{1pt}
-     \textbf{Technologies}{: ASP.NET, WPF, gRPC, Node.js, React, Express, Bootstrap, Passport, Django} \\
+     \textbf{Technologies}{: ASP.NET, WPF, gRPC, Node.js, Angular, React} \\
     }}
  \end{itemize}
  \vspace{-16pt}
@@ -253,12 +237,7 @@
   \achievementItem{Ranked \textbf{1127\textsuperscript{th}} globally and \textbf{115\textsuperscript{th}} in India in Google HashCode, out of 10724 teams}
   \achievementItem{Qualified ACM-ICPC 2020 in Kanpur(\textbf{rank 63}) and Gwalior regions}
   \achievementItem{Qualified ACM-ICPC 2019 in Kharagpur(\textbf{rank 81}) and Amritapuri(\textbf{rank 37}) regions.}
-  \achievementItem{Successfully cleared the Foundation level in \textbf{CCDSAP Certification} CodeChef.}
-  \achievementItem{Qualified CodeChef’s Snackdown with a rank of \textbf{2587 out of 27875}  teams}
-  \achievementItem{Ranked {\bf 3\textsuperscript{rd} in Codeutsava 2020} 2020, NIT Raipur’s Annual Hackathon out of 30 participating teams}
 \end{itemize}
-        
-    % \resumeSubHeadingListEnd
 
 
 \end{document}

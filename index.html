@@ -14,10 +14,17 @@
             margin:0;
         }
     </style>
+
+    <script type="text/javascript">
+        function getUrlPath()
+        {
+            return "https://jai-dewani.github.io/resume/resume.pdf?" + new Date().getTime();
+        }
+    </script>
 </head>
 <body>
     <div style="height: 100vh;">
-        <iframe src="https://jai-dewani.github.io/resume/resume.pdf?=<?=time();?>" width="100%" height="100%">
+        <iframe src="" width="100%" height="100%" id="resume" onload="this.onload=null; this.src=getUrlPath();">
     </div>
 </body>
 </html>

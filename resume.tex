@@ -116,7 +116,7 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\justify \begin{itemize} \vspace{-4pt}}
+\newcommand{\resumeItemListStart}{\justify \begin{itemize} \vspace{-2pt}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-1pt}}
 
 %-------------------------------------------
@@ -152,12 +152,14 @@
       {Design Engineer}{Bengaluru, Karnataka, India}
       % \vspace{-8pt}
       \resumeItemListStart
-        \resumeItem{Owned product and spearheaded the development of the Visual Acuity testing module, overseeing its \textbf{market release}}
-        \resumeItem{Collaborated with hiring managers to successfully recruit top-tier entry-level and experienced developers, enhancing the talent pool for our team and division.}
-        \resumeItem{Enforced atomic operations, streamlining complexity and reducing cognitive complexity}
-        \resumeItem{Executed migration of product from .NET Framework to .NET Core, improving performance, eliminating dependency on obsolete libraries blocking future development}
-        \resumeItem{Streamlined request handling efficiency through the design of a queuing mechanism in the response handler, achieving a \textbf{40\% reduction in click-to-response time} over multiple clicks}
-
+        % \resumeItem{}
+        \resumeItem{Owned the product and lead the development of the Visual Acuity testing module, driving successful \textbf{market release}}
+        \resumeItem{Assumed a leadership role within the team, working alongside them to successfully deliver VISUCORE Release 1.1}
+        \resumeItem{Collaborated with hiring managers to successfully recruit top-tier entry-level and experienced developers, enhancing the talent pool for our team and VTS division}
+        \resumeItem{Enforced atomic operations  to streamline development and reduce cognitive load}
+        \resumeItem{Designed a queuing mechanism in the response handler, \textbf{reducing click-to-response time by 40\%} during high-frequency interactions}
+        \resumeItem{Migrated product from .NET Framework 4.8 to .NET 8, enhancing performance, future-proofing development, and eliminating security vulnerabilities}
+        \resumeItem{Engineered an interop wrapper around C++ driver DLLs to bridge hardware-level integrations ensured reliable cross-language communication and reduced dev effort by 30\%.}
       \resumeItemListEnd
 
     \vspace{3pt}
@@ -167,11 +169,10 @@
       {Software Engineer}{Bengaluru, Karnataka, India}
       % \vspace{-8pt}
       \resumeItemListStart
-        \resumeItem{Empowered team agility with advanced development strategies, refined hardware mocking to reduce device reliance}
-        \resumeItem{Boosted testing and code quality through PR checks using static analyzers and rigorous code reviews}
+        \resumeItem{Enhanced team agility by refining hardware mocking to minimize dependence on physical devices.}
+        \resumeItem{Improved code quality and security through PR checks, static analyzers, and adherence to Roslyn's best practices.}
         \resumeItem{Aligned cross-functional teams to define and seamlessly integrate API requirements, ensuring clean and extensible code}
-        \resumeItem{Created IPC channel protocols and integrated gRPC to mitigate coupling and optimize communication across services}
-        \resumeItem{Utilized NUnit and Fluent Assertions to develop new unit tests, helping improve the overall development cycle}
+        \resumeItem{Integrate gRPC to facilitate IPC mitigating coupling and optimize parallel development across services}
       \resumeItemListEnd
     
   \resumeSubHeadingListEnd
@@ -191,25 +192,20 @@
         \resumeProjectHeading
             {\textbf{VISUCORE 500} $|$ \emph{C\#, Angular}  $|$ \href{https://www.zeiss.com/vision-care/int/eye-care-professionals/equipment/refraction/combined-refraction-unit.html}{Zeiss VISUCORE 500}}{Jan 2021 - Current}
             \resumeItemListStart
-                \resumeItem{Owned the development of visual acuity testing module for it's first and second market release}
+                \resumeItem{Owned the development of visual acuity testing module for market releases - R1 and R1.1}
                 \resumeItem{Collaborated with Product team to transfer Refraction module and reduce turn around time by enhancing \textbf{performance of workflow by 28\%} through restructuring the application response keeping asynchronous design principles at the center}
-                \resumeItem{Decomposed the monolithic architecture into 3 micro services communicating via gRPC to minimize coupling}
-                \resumeItem{Ensured secure and robust code quality by following best code quality \& style analyzers set by Roslyn}
-                \resumeItem{Mastered end-to-end product life cycle and Agile methodologies}
             \resumeItemListEnd
         \resumeProjectHeading
             {\textbf{VISUSCREEN 100/500} $|$ \emph{C\#, HTML, CSS, JS}  $|$ \href{https://www.zeiss.com/vision-care/int/eye-care-professionals/equipment/refraction/subjective-refraction-unit.html}{Zeiss VISUSCREEN 100/500}}{June 2023 - August 2023}
             \resumeItemListStart
-                \resumeItem{Implemented a lock and release mechanism to ensure a maximum of one connection to critical communication channels, ensuring system stability}
-                \resumeItem{Produced comprehensive system software integration documentation to facilitate the seamless release of software changes into the market}
-                \resumeItem{Mastered end-to-end product life cycle and Agile methodologies}
+                \resumeItem{Designed and implemented a lock-and-release mechanism to enforce mutual exclusion protocol to critical communication channels, enhancing system stability}
+                \resumeItem{Authored comprehensive system integration documentation to enable seamless software releases}
             \resumeItemListEnd
         \resumeProjectHeading
             {\textbf{FunMark} $|$ \emph{Python} $|$ \href{https://github.com/jai-dewani/fun-mark}{GitHub}}{May 2020} 
             \resumeItemListStart
-                \resumeItem{Developed a zero-overhead wrapper to benchmark and visually depict function performance.}
-                \resumeItem{Released on PyPi package manager to be easily accessible with pip with currently over 6K downloads}
-                \resumeItem{Documented the process on how to utilize the library efficiently on \href{https://jai-dewani.github.io/blogs/fun-mark/}{jai-dewani.github.io/blogs/fun-mark/}}
+                \resumeItem{Developed a minimal-overhead wrapper to benchmark and visually function performance}
+                \resumeItem{Released on PyPi package manager to be easily accessible with pip with currently over 7K downloads}
             \resumeItemListEnd 
     \resumeSubHeadingListEnd
 
@@ -220,9 +216,9 @@
     {\item{
      \textbf{Languages \& Frameworks}{: C\#, .NET, Angular, JavaScript, Python} \\
      \vspace{1pt}
-     \textbf{Developer Tools}{: Azure, MSBuild, MySQL, SonarQube, Docker, CI/CD, Git} \\
+     \textbf{Developer Tools}{: Azure, MSBuild, MySQL, SonarQube, Blackduck, IRIUS Risk Docker, CI/CD, Git} \\
      \vspace{1pt}
-     \textbf{Technologies}{: ASP.NET, .NET Core, WPF, gRPC, Node.js, Angular, React} \\
+     \textbf{Technologies}{: .NET, ASP.NET WPF, gRPC, Node.js, Angular, React} \\
     }}
  \end{itemize}
  \vspace{-16pt}
@@ -233,11 +229,12 @@
 \section{ACADEMIC ACHIEVEMENTS \& EXTRA-CURRICULAR}
 
 \begin{itemize}[leftmargin=0.2in]
-  \achievementItem{\textbf{Mentored and Judged over 50+ teams} in various hackathons like HackCBS 4.0, HacckOn 2.0 and DotSlash 4.0}
+  \achievementItem{Contributed to open-source tools like Excalidraw, PowerToys}
+  \achievementItem{Organized Coding Dojos between Indian and German colleges to foster collaborative hacking culture}
+  \achievementItem{\textbf{Mentored and Judged over 100+ teams} across nationwide hackathons like HackCBS 4.0, HacckOn 2.0 and DotSlash 4.0}
   \achievementItem{\textbf{Co-founded}  the  first  technical  club  at  IIIT-NR,  organized  various  events, talks and hackathons to  promote competitive programming and development while improve the coding environment of the Institute.}
-  \achievementItem{Ranked \textbf{1127\textsuperscript{th}} globally and \textbf{115\textsuperscript{th}} in India in Google HashCode, out of 10724 teams}
-  \achievementItem{Qualified ACM-ICPC 2020 in Kanpur(\textbf{rank 63}) and Gwalior regions}
-  \achievementItem{Qualified ACM-ICPC 2019 in Kharagpur(\textbf{rank 81}) and Amritapuri(\textbf{rank 37}) regions.}
+  % \achievementItem{Ranked \textbf{115\textsuperscript{th}} Nation-wide in Google HashCode, out of 10724 teams}
+  \achievementItem{Qualified ACM-ICPC 2019 \& 2020 in Kanpur(\textbf{rank 63}), Kharagpur(\textbf{rank 81}), Amritapuri(\textbf{rank 37}) and Gwalior regions}
 \end{itemize}
 
 

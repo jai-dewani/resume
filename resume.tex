@@ -12,7 +12,7 @@
 \usepackage{titlesec}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
+\usepackage[hidelinks, hyperfootnotes=false, pdfpagemode=UseNone]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{fontawesome5}
@@ -68,7 +68,7 @@
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
-  \item\small{
+  \item\small \raggedright{
     {#1 \vspace{-2pt}}
   }
 }
@@ -86,7 +86,7 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
+  \vspace{-0pt}\item
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & \textbf{\small #2} \\
       \textit{\small#3} & \textit{\small #4} \\
@@ -128,7 +128,7 @@
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
+\hypersetup{pdfcreator={}, pdftoolbar=false, pdfmenubar=false}
 \begin{document}
 
 %----------HEADING----------
@@ -140,11 +140,10 @@
 \begin{center}
     {\Huge \scshape Jai Kumar Dewani} \\ \vspace{1pt}
     % 123 Street Name, Town, State 12345 \\ 
-    \vspace{5pt}
-    \small 9340422023  \quad
-    \href{mailto:jai.dewani.99@gmail.com}{jai.dewani.99@gmail.com} \quad
-    \href{https://linkedin.com/in/jai-dewani}{linkedin.com/in/jai-dewani} \quad
-    \href{https://github.com/jai-dewani}{github.com/jai-dewani}
+\small 9340422023 \quad \textbullet \quad
+\href{mailto:jai.dewani.99@gmail.com}{jai.dewani.99@gmail.com} \quad \textbullet \quad
+\href{https://www.linkedin.com/in/jai-dewani/}{linkedin.com/in/jai-dewani} \quad \textbullet \quad
+\href{https://github.com/jai-dewani}{github.com/jai-dewani}
         
     % \small \raisebox{-0.1\height}\faPhone\ 9340422023 ~ 
     % \raisebox{-0.2\height}\faEnvelope\ \href{mailto:jai.dewani.99@gmail.com}{ jai.dewani.99@gmail.com} ~ 
@@ -174,9 +173,9 @@
     \resumeSubSubheading{Software Design Engineer}{July 2022 -- Dec 2024}
     \resumeItemListStart
         \resumeItem{Led VISUCORE R1.1 delivery, coordinating cross-team technical decisions and workflows.}
-        \resumeItem{Owned migration of 110+ legacy .NET Framework 4.8 modules to .NET 8, reducing startup time by 22\% and improving security posture.}
+        \resumeItem{Owned migration of 15+ legacy .NET Framework 4.8 modules to .NET 8, reducing startup time by 22\% and improving security posture.}
         \resumeItem{Built an event-queue command-coalescing system to merge high-frequency user interactions, cutting hardware execution time by 90\% and improving UX.}
-        \resumeItem{Built a C++ interop wrapper that stabilized hardware communication and reduced integration effort by 30\%}
+        \resumeItem{Built a C++ interop wrapper that stabilized hardware communication and reduced integration effort by 30\%.}
         \resumeItem{Contributed to hiring processes for both early-career and experienced engineers, strengthening overall engineering capability.}
     \resumeItemListEnd
 
@@ -206,11 +205,11 @@
             {\textbf{Password Manager System} $|$ \emph{C\#}}{Mar 2025 - Sep 2025}
             \resumeItemListStart
                 \resumeItem{Extended Password Manager compatibility to VC500-connected VTS devices, enabling secure credential handling across the ecosystem.}
-                \resumeItem{Owned requirement clarification, solution design, and implementation across teams}
-                \resumeItem{Engineered a robust restart notification framework, improving system observability and reliability}
+                \resumeItem{Owned requirement clarification, solution design, and implementation across teams.}
+                \resumeItem{Engineered a robust restart notification framework, improving system observability and reliability.}
             \resumeItemListEnd
         \resumeProjectHeading
-            {\textbf{Subjective Refraction Platform} $|$ \emph{C\#, Angular}  $|$ \href{https://www.zeiss.com/vision-care/int/eye-care-professionals/equipment/refraction/combined-refraction-unit.html}{Zeiss product page}}{Jan 2021 - Current}
+            {\textbf{Subjective Refraction Platform} $|$ \emph{C\#, Angular}  $|$ \href{https://www.zeiss.com/vision-care/int/eye-care-professionals/equipment/refraction/combined-refraction-unit.html}{VISUCORE Product Page}}{Jan 2021 - Current}
             \resumeItemListStart
                 \resumeItem{Owned the development of visual acuity testing module for market releases - R1 and R1.1}
                 \resumeItem{Orchestrated the design of an asynchronous Refraction module, improving workflow performance by 28\%.}
@@ -224,7 +223,9 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     {\item{
-     \textbf{Languages \& Frameworks}{: C\#, .NET 8, .NET Framework, ASP.NET, WPF, NUnit, gRPC, Angular, Python, Node.js, React} \\
+     \textbf{Languages}{: C\#, Python, JavaScript, TypeScript } \\
+     \vspace{1pt}
+     \textbf{Frameworks}{: .NET 8, .NET Framework, ASP.NET, WPF, NUnit, Node.js, gRPC, Angular, React} \\
      \vspace{1pt}
      \textbf{Developer Tools}{: Azure, MSBuild, MySQL, SonarQube, Blackduck, IRIUS Risk, Docker, GitHub Actions, CI/CD} \\
     }}
@@ -245,3 +246,4 @@
 
 
 \end{document}
+\phantom{}

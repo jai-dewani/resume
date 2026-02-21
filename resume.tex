@@ -20,7 +20,9 @@
 \usepackage{tabularx}
 \usepackage{fontawesome5}
 \usepackage{multicol}
+\usepackage[sfdefault]{FiraSans}
 \setlength{\multicolsep}{-3.0pt}
+\hypersetup{hidelinks}
 \setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
 \usepackage{ragged2e}
@@ -148,18 +150,25 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Carl Zeiss - Vision Care R\&D and Technologies}{July 2022 -- Present}
-      {Design Engineer}{Bengaluru, Karnataka, India}
+      {Carl Zeiss - Vision Care R\&D and Technologies}{Jan 2026 -- Present}
+      {Senior Software Design Engineer}{Bengaluru, Karnataka, India}
       % \vspace{-8pt}
       \resumeItemListStart
-        % \resumeItem{}
-        \resumeItem{Owned the product and lead the development of the Visual Acuity testing module, driving successful \textbf{market release}}
-        \resumeItem{Assumed a leadership role within the team, working alongside them to successfully deliver VISUCORE Release 1.1}
-        \resumeItem{Collaborated with hiring managers to successfully recruit top-tier entry-level and experienced developers, enhancing the talent pool for our team and VTS division}
-        \resumeItem{Enforced atomic operations  to streamline development and reduce cognitive load}
-        \resumeItem{Designed a queuing mechanism in the response handler, \textbf{reducing click-to-response time by 40\%} during high-frequency interactions}
-        \resumeItem{Migrated product from .NET Framework 4.8 to .NET 8, enhancing performance, future-proofing development, and eliminating security vulnerabilities}
-        \resumeItem{Engineered an interop wrapper around C++ driver DLLs to bridge hardware-level integrations ensured reliable cross-language communication and reduced dev effort by 30\%.}
+        \resumeItem{Leading architecture, planning, and development of Subjective Refraction platform features}
+        \resumeItem{Driving product–engineering alignment to deliver next-generation optometry solutions}
+        \resumeItem{Authored comprehensive medical system integration documentation that streamlined software releases}
+    \resumeItemListEnd
+        
+    \resumeSubheading
+      {Carl Zeiss - Vision Care R\&D and Technologies}{July 2022 -- Dec 2025}
+      {Software Design Engineer}{Bengaluru, Karnataka, India}
+      % \vspace{-8pt}
+      \resumeItemListStart
+        \resumeItem{Led a team of 5 developers to align VISUCORE Release 1.1 release}
+        \resumeItem{Owned migration of Subjective Refraction unit with 120 modules from .NET Framework 4.8 to .NET 8, improving performance and security}
+        \resumeItem{Designed and delivered a user-input queuing mechanism, improving response latency by 40\% and reducing hardware calls by 25\%}
+        \resumeItem{Engineered an interop wrapper around C++ driver DLLs to bridge hardware-level integrations ensuring reliable cross-language communication and reduced dev effort by 30\%.}
+        \resumeItem{Contributed to hiring processes, improving team capability through recruitment of top-tier developers}
       \resumeItemListEnd
 
     \vspace{3pt}
@@ -169,10 +178,9 @@
       {Software Engineer}{Bengaluru, Karnataka, India}
       % \vspace{-8pt}
       \resumeItemListStart
-        \resumeItem{Enhanced team agility by refining hardware mocking to minimize dependence on physical devices.}
-        \resumeItem{Improved code quality and security through PR checks, static analyzers, and adherence to Roslyn's best practices.}
-        \resumeItem{Aligned cross-functional teams to define and seamlessly integrate API requirements, ensuring clean and extensible code}
-        \resumeItem{Integrate gRPC to facilitate IPC mitigating coupling and optimize parallel development across services}
+        \resumeItem{Enhanced team agility by refining hardware mocking to to reduce reliance on physical devices and accelerate development cycles}
+        \resumeItem{Orchestrated 4 cross-functional teams to define  seamlessly integrate API requirements, ensuring clean and extensible code}
+        \resumeItem{Integrated gRPC to facilitate IPC mitigating coupling and optimize parallel development across services}
       \resumeItemListEnd
     
   \resumeSubHeadingListEnd
@@ -190,16 +198,20 @@
     \vspace{-2pt}
     \resumeSubHeadingListStart
         \resumeProjectHeading
-            {\textbf{VISUCORE 500} $|$ \emph{C\#, Angular}  $|$ \href{https://www.zeiss.com/vision-care/int/eye-care-professionals/equipment/refraction/combined-refraction-unit.html}{Zeiss VISUCORE 500}}{Jan 2021 - Current}
+            {\textbf{Password Manager System} $|$ \emph{C\#}}{Mar 2025 - Sep 2025}
             \resumeItemListStart
-                \resumeItem{Owned the development of visual acuity testing module for market releases - R1 and R1.1}
-                \resumeItem{Collaborated with Product team to transfer Refraction module and reduce turn around time by enhancing \textbf{performance of workflow by 28\%} through restructuring the application response keeping asynchronous design principles at the center}
+                \resumeItem{Led critical enablement of Password Manager for VISUREF 600, expanding support to VC500-connected VTS devices}
+                \resumeItem{Owned requirement clarification, solution design, and implementation across teams}
+                \resumeItem{Engineered a robust restart notification framework, improving system observability and reliability}
             \resumeItemListEnd
         \resumeProjectHeading
-            {\textbf{VISUSCREEN 100/500} $|$ \emph{C\#, HTML, CSS, JS}  $|$ \href{https://www.zeiss.com/vision-care/int/eye-care-professionals/equipment/refraction/subjective-refraction-unit.html}{Zeiss VISUSCREEN 100/500}}{June 2023 - August 2023}
+            {\textbf{VISUCORE 500} $|$ \emph{C\#, Angular}  $|$ \href{https://www.zeiss.com/vision-care/int/eye-care-professionals/equipment/refraction/combined-refraction-unit.html}{Zeiss product page}}{Jan 2021 - Current}
             \resumeItemListStart
+                \resumeItem{Owned the development of visual acuity testing module for market releases - R1 and R1.1}
+                \resumeItem{Orchestrated asynchronous designed Refraction module to enhancing \textbf{performance of workflows by 28\%}}
                 \resumeItem{Designed and implemented a lock-and-release mechanism to enforce mutual exclusion protocol to critical communication channels, enhancing system stability}
-                \resumeItem{Authored comprehensive system integration documentation to enable seamless software releases}
+                \resumeItem{Enforced atomic operations  to streamline development and reduce cognitive load}
+        
             \resumeItemListEnd
         \resumeProjectHeading
             {\textbf{FunMark} $|$ \emph{Python} $|$ \href{https://github.com/jai-dewani/fun-mark}{GitHub}}{May 2020} 
@@ -214,11 +226,11 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     {\item{
-     \textbf{Languages \& Frameworks}{: C\#, .NET, Angular, JavaScript, Python} \\
+     \textbf{Languages \& Frameworks}{: ASP.NET, WPF, gRPC, Angular, JavaScript, Python, Node.js, React} \\
      \vspace{1pt}
      \textbf{Developer Tools}{: Azure, MSBuild, MySQL, SonarQube, Blackduck, IRIUS Risk Docker, CI/CD, Git} \\
      \vspace{1pt}
-     \textbf{Technologies}{: .NET, ASP.NET WPF, gRPC, Node.js, Angular, React} \\
+     \textbf{Technologies}{: } \\
     }}
  \end{itemize}
  \vspace{-16pt}
@@ -229,12 +241,15 @@
 \section{ACADEMIC ACHIEVEMENTS \& EXTRA-CURRICULAR}
 
 \begin{itemize}[leftmargin=0.2in]
+  \achievementItem{Gave talk at FOSS Conference on how Zeiss utilized and supports open source tools/frameworks  }
+  \achievementItem{Got awarded with \textbf{Ownership Spirit} during 2025 offsite}
   \achievementItem{Contributed to open-source tools like Excalidraw, PowerToys}
   \achievementItem{Organized Coding Dojos between Indian and German colleges to foster collaborative hacking culture}
   \achievementItem{\textbf{Mentored and Judged over 100+ teams} across nationwide hackathons like HackCBS 4.0, HacckOn 2.0 and DotSlash 4.0}
   \achievementItem{\textbf{Co-founded}  the  first  technical  club  at  IIIT-NR,  organized  various  events, talks and hackathons to  promote competitive programming and development while improve the coding environment of the Institute.}
-  % \achievementItem{Ranked \textbf{115\textsuperscript{th}} Nation-wide in Google HashCode, out of 10724 teams}
+  % \achievementItem{Ranked \textbf{top 1\%} Nation-wide in Google HashCode, out of 10724 teams}
   \achievementItem{Qualified ACM-ICPC 2019 \& 2020 in Kanpur(\textbf{rank 63}), Kharagpur(\textbf{rank 81}), Amritapuri(\textbf{rank 37}) and Gwalior regions}
+  \achievementItem{Qualified ACM-ICPC Regionals (Top 100 nationwide)}
 \end{itemize}
 
 

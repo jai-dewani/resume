@@ -10,22 +10,18 @@
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
-\usepackage{tabularx}
 \usepackage{fontawesome5}
-\usepackage{multicol}
+\usepackage{ragged2e}
 \usepackage[sfdefault]{FiraSans}
-\setlength{\multicolsep}{-3.0pt}
+% \setlength{\multicolsep}{-3.0pt}
 \hypersetup{hidelinks}
 \setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
-\usepackage{ragged2e}
 
 \usepackage{xcolor}
 \hypersetup{colorlinks,urlcolor=blue}
@@ -39,7 +35,6 @@
 
 % serif
 % \usepackage{CormorantGaramond}
-\usepackage{charter}
 
 
 \pagestyle{fancy}
@@ -49,9 +44,9 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.6in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.19in}
+\addtolength{\oddsidemargin}{-0.4in}
+\addtolength{\evensidemargin}{-0.4in}
+\addtolength{\textwidth}{1.0in}
 \addtolength{\topmargin}{-.7in}
 \addtolength{\textheight}{1.4in}
 
@@ -97,6 +92,14 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+\newcommand{\newResumeSubheading}[2]{
+\vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2}
+      % \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
 \newcommand{\resumeSubSubheading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -118,8 +121,8 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\justify \begin{itemize} \vspace{-2pt}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-1pt}}
+\newcommand{\resumeItemListStart}{\justify \begin{itemize} \vspace{-1pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -149,32 +152,32 @@
 \section{Experience}
 \resumeSubHeadingListStart
 
-\resumeSubheading
+\newResumeSubheading
     {Carl Zeiss - Vision Care R\&D and Technologies}{Bengaluru, Karnataka, India}
-    {Senior Software Design Engineer \quad | \quad Software Design Engineer \quad | \quad Software Engineer}{June 2021 -- Present}
-
+    % {Senior Software Design Engineer \quad | \quad Software Design Engineer \quad | \quad Software Engineer}{June 2021 -- Present}
+    \vspace{-14pt}
     % Senior Software Design Engineer
     \resumeSubSubheading{Senior Software Design Engineer}{Jan 2025 -- Present}
     \resumeItemListStart
-        \resumeItem{Leading architecture and feature development for VISUCORE, driving roadmap execution and long-term platform scalability.}
-        \resumeItem{Partnering with Product Owners to define product direction and translate requirements into robust engineering solutions.}
-        \resumeItem{Authored standardized medical-system integration documentation to streamline release processes and reduce cross-team ambiguity.}
+        \resumeItem{Leading Refraction Unit architecture and feature roadmap, ensuring scalable long-term platform design.}
+        \resumeItem{Driving product–engineering alignment to deliver next-generation optometry solutions.}
+        \resumeItem{Authored medical-system integration documentation to streamline release processes and reduce cross-team ambiguity.}
     \resumeItemListEnd
 
     % Software Design Engineer
     \resumeSubSubheading{Software Design Engineer}{July 2022 -- Dec 2024}
     \resumeItemListStart
-        \resumeItem{Led team efforts in delivering VISUCORE Release 1.1, coordinating cross-team technical decisions and development workflows.}
-        \resumeItem{Owned migration of legacy .NET Framework 4.8 components to .NET 8, improving application performance and overall security posture.}
-        \resumeItem{Designed and implemented a user-input queuing mechanism, improving response latency by 40\% and reducing hardware calls by 25\%.}
-        \resumeItem{Engineered a C++ interop wrapper to stabilize hardware-level communication and reduce integration effort by 30\%.}
+        \resumeItem{Led VISUCORE R1.1 delivery, coordinating cross-team technical decisions and workflows.}
+        \resumeItem{Owned migration of legacy .NET Framework 4.8 modules to .NET 8, boosting performance and security.}
+        \resumeItem{Built an event-queue command-coalescing system to merge high-frequency user interactions, cutting hardware execution time by 90\% and improving UX.}
+        \resumeItem{Built a C++ interop wrapper that stabilized hardware communication and reduced integration effort by 30\%}
         \resumeItem{Contributed to hiring processes for both early-career and experienced engineers, strengthening overall engineering capability.}
     \resumeItemListEnd
 
     % Software Engineer
     \resumeSubSubheading{Software Engineer}{June 2021 -- June 2022}
     \resumeItemListStart
-        \resumeItem{Improved engineering velocity by enhancing hardware-mocking infrastructure, reducing reliance on physical test devices.}
+        \resumeItem{Increased engineering velocity by upgrading mocking infrastructure, reducing reliance on 3rd party services}
         \resumeItem{Drove alignment across software, hardware, and product teams to establish clean, extensible API contracts.}
         \resumeItem{Integrated gRPC for IPC between services, reducing coupling and enabling parallel development across modules.}
     \resumeItemListEnd
@@ -192,30 +195,22 @@
 
 %-----------PROJECTS-----------
 \section{Projects}
-    \vspace{-2pt}
     \resumeSubHeadingListStart
-        \resumeProjectHeading
+        \newResumeSubheading
             {\textbf{Password Manager System} $|$ \emph{C\#}}{Mar 2025 - Sep 2025}
             \resumeItemListStart
-                \resumeItem{Led critical enablement of Password Manager for VISUREF 600, expanding support to VC500-connected VTS devices}
+                \resumeItem{Extended Password Manager compatibility to VC500-connected VTS devices, enabling secure credential handling across the ecosystem.}
                 \resumeItem{Owned requirement clarification, solution design, and implementation across teams}
                 \resumeItem{Engineered a robust restart notification framework, improving system observability and reliability}
             \resumeItemListEnd
         \resumeProjectHeading
-            {\textbf{VISUCORE 500} $|$ \emph{C\#, Angular}  $|$ \href{https://www.zeiss.com/vision-care/int/eye-care-professionals/equipment/refraction/combined-refraction-unit.html}{Zeiss product page}}{Jan 2021 - Current}
+            {\textbf{Subjective Refraction Platform} $|$ \emph{C\#, Angular}  $|$ \href{https://www.zeiss.com/vision-care/int/eye-care-professionals/equipment/refraction/combined-refraction-unit.html}{Zeiss product page}}{Jan 2021 - Current}
             \resumeItemListStart
                 \resumeItem{Owned the development of visual acuity testing module for market releases - R1 and R1.1}
-                \resumeItem{Orchestrated asynchronous designed Refraction module to enhancing \textbf{performance of workflows by 28\%}}
-                \resumeItem{Designed and implemented a lock-and-release mechanism to enforce mutual exclusion protocol to critical communication channels, enhancing system stability}
-                \resumeItem{Enforced atomic operations  to streamline development and reduce cognitive load}
-        
+                \resumeItem{Orchestrated asynchronous designed Refraction module leading to \textbf{workflow performance optimization by 28\%}}
+                \resumeItem{Implemented lock-and-release mutual-exclusion mechanism, improving system stability.}
+                \resumeItem{Introduced atomic command execution guarantees, simplifying concurrent workflows and reducing developer cognitive load.}
             \resumeItemListEnd
-        \resumeProjectHeading
-            {\textbf{FunMark} $|$ \emph{Python} $|$ \href{https://github.com/jai-dewani/fun-mark}{GitHub}}{May 2020} 
-            \resumeItemListStart
-                \resumeItem{Developed a minimal-overhead wrapper to benchmark and visually function performance}
-                \resumeItem{Released on PyPi package manager to be easily accessible with pip with currently over 7K downloads}
-            \resumeItemListEnd 
     \resumeSubHeadingListEnd
 
 %
@@ -223,11 +218,9 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     {\item{
-     \textbf{Languages \& Frameworks}{: ASP.NET, WPF, gRPC, Angular, JavaScript, Python, Node.js, React} \\
+     \textbf{Languages \& Frameworks}{: C\#, .NET 8, .NET Framework, ASP.NET, WPF, NUnit, gRPC, Angular, Python, Node.js, React} \\
      \vspace{1pt}
      \textbf{Developer Tools}{: Azure, MSBuild, MySQL, SonarQube, Blackduck, IRIUS Risk Docker, CI/CD, Git} \\
-     \vspace{1pt}
-     \textbf{Technologies}{: } \\
     }}
  \end{itemize}
  \vspace{-16pt}
@@ -235,18 +228,13 @@
 
 
 %-----------INVOLVEMENT---------------
-\section{ACADEMIC ACHIEVEMENTS \& EXTRA-CURRICULAR}
-
+\section{Achievements}
 \begin{itemize}[leftmargin=0.2in]
-  \achievementItem{Gave talk at FOSS Conference on how Zeiss utilized and supports open source tools/frameworks  }
-  \achievementItem{Got awarded with \textbf{Ownership Spirit} during 2025 offsite}
-  \achievementItem{Contributed to open-source tools like Excalidraw, PowerToys}
-  \achievementItem{Organized Coding Dojos between Indian and German colleges to foster collaborative hacking culture}
-  \achievementItem{\textbf{Mentored and Judged over 100+ teams} across nationwide hackathons like HackCBS 4.0, HacckOn 2.0 and DotSlash 4.0}
-  \achievementItem{\textbf{Co-founded}  the  first  technical  club  at  IIIT-NR,  organized  various  events, talks and hackathons to  promote competitive programming and development while improve the coding environment of the Institute.}
-  % \achievementItem{Ranked \textbf{top 1\%} Nation-wide in Google HashCode, out of 10724 teams}
-  \achievementItem{Qualified ACM-ICPC 2019 \& 2020 in Kanpur(\textbf{rank 63}), Kharagpur(\textbf{rank 81}), Amritapuri(\textbf{rank 37}) and Gwalior regions}
-  \achievementItem{Qualified ACM-ICPC Regionals (Top 100 nationwide)}
+  \achievementItem{Recognized with the \textbf{Ownership Spirit} award (2025 Zeiss offsite) for leading resolution of high-impact system-blocking customer issues.}
+  \achievementItem{Speaker at FOSS Conference on how Zeiss leverages and contributes to open-source frameworks.}
+  \achievementItem{Contributed to open-source projects including Excalidraw and Microsoft PowerToys.}
+  \achievementItem{Mentored and judged 100+ teams at national hackathons including HackCBS, HackOn, and DotSlash.}
+  \achievementItem{Qualified \textbf{ACM ICPC Regionals} (Top 100 Nationwide across 2019–2020).}
 \end{itemize}
 
 

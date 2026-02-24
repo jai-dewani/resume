@@ -8,6 +8,22 @@
     <meta http-equiv='expires' content='0'> 
     <meta http-equiv='pragma' content='no-cache'>
     <title>Resume - Jai Kumar Dewani</title>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3CHZ3NZZP9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-3CHZ3NZZP9', {
+            // Enable enhanced measurement for better tracking
+            enhanced_measurement_click_events: true,
+            enhanced_measurement_outbound_link: true,
+            enhanced_measurement_page_views: true,
+            enhanced_measurement_video_engagement: true
+        });
+    </script>
+    
     <style>
         *{
             border:0;
@@ -20,6 +36,80 @@
         {
             return "https://jai-dewani.github.io/resume/resume.pdf?" + new Date().getTime();
         }
+        
+        // Track custom events for resume interactions
+        function trackResumeView() {
+            // Track page view with source information
+            const urlParams = new URLSearchParams(window.location.search);
+            const source = urlParams.get('source') || 'direct';
+            const medium = urlParams.get('medium') || 'web';
+            const campaign = urlParams.get('campaign') || 'default';
+            const customId = urlParams.get('id') || null;
+            
+            // Send custom event to Google Analytics
+            gtag('event', 'resume_view', {
+                'source': source,
+                'medium': medium,
+                'campaign': campaign,
+                'custom_user_id': customId,
+                'page_title': document.title,
+                'page_location': window.location.href
+            });
+            
+            // Track PDF load event
+            gtag('event', 'pdf_load', {
+                'file_name': 'resume.pdf',
+                'source': source,
+                'custom_user_id': customId
+            });
+            
+            console.log('Resume view tracked:', {source, medium, campaign, customId});
+        }
+        
+        // Track when user spends time on page
+        function trackEngagement() {
+            let startTime = Date.now();
+            
+            // Track time spent after 10 seconds
+            setTimeout(() => {
+                gtag('event', 'engagement_10s', {
+                    'time_on_page': '10_seconds'
+                });
+            }, 10000);
+            
+            // Track time spent after 30 seconds
+            setTimeout(() => {
+                gtag('event', 'engagement_30s', {
+                    'time_on_page': '30_seconds'
+                });
+            }, 30000);
+
+            setTimeout(() => {
+                gtag('event', 'engagement_60s', {
+                    'time_on_page': '60_seconds'
+                });
+            }, 60000);
+
+            setTimeout(() => {
+                gtag('event', 'engagement_120s', {
+                    'time_on_page': '120_seconds'
+                });
+            }, 120000);
+            
+            // Track when user leaves page
+            window.addEventListener('beforeunload', () => {
+                const timeSpent = Math.round((Date.now() - startTime) / 1000);
+                gtag('event', 'session_duration', {
+                    'time_spent_seconds': timeSpent
+                });
+            });
+        }
+        
+        // Initialize tracking when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            trackResumeView();
+            trackEngagement();
+        });
     </script>
 </head>
 <body>

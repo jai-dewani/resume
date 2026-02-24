@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Link Generator - Jai Kumar Dewani</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #555;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        input:focus, select:focus {
+            outline: none;
+            border-color: #007acc;
+            box-shadow: 0 0 5px rgba(0,122,204,0.3);
+        }
+        .generated-url {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+            word-break: break-all;
+            font-family: monospace;
+            font-size: 14px;
+        }
+        .btn {
+            background: #007acc;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        .btn:hover {
+            background: #005a9e;
+        }
+        .btn-secondary {
+            background: #6c757d;
+        }
+        .btn-secondary:hover {
+            background: #545b62;
+        }
+        .examples {
+            background: #e7f3ff;
+            border-left: 4px solid #007acc;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .examples h3 {
+            margin-top: 0;
+        }
+        .success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔗 Resume Tracking Link Generator</h1>
+        
+        <div class="examples">
+            <h3>Use Cases</h3>
+            <ul>
+                <li><strong>Job Applications:</strong> Track which companies are viewing your resume</li>
+                <li><strong>Networking:</strong> See if contacts from events check out your profile</li>
+                <li><strong>Recruiter Outreach:</strong> Monitor engagement from specific recruiters</li>
+                <li><strong>Social Media:</strong> Track traffic from LinkedIn, Twitter posts</li>
+            </ul>
+        </div>
+
+        <form id="linkGenerator">
+            <div class="form-group">
+                <label for="source">Source (Where is this link going?)</label>
+                <select id="source" required>
+                    <option value="">Select source...</option>
+                    <option value="linkedin">LinkedIn</option>
+                    <option value="email">Email</option>
+                    <option value="networking">Networking Event</option>
+                    <option value="job_portal">Job Portal</option>
+                    <option value="recruiter">Recruiter</option>
+                    <option value="social_media">Social Media</option>
+                    <option value="business_card">Business Card</option>
+                    <option value="cold_outreach">Cold Outreach</option>
+                    <option value="referral">Referral</option>
+                    <option value="custom">Custom</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="medium">Medium (How are you sharing this?)</label>
+                <select id="medium" required>
+                    <option value="">Select medium...</option>
+                    <option value="application">Job Application</option>
+                    <option value="message">Direct Message</option>
+                    <option value="post">Social Post</option>
+                    <option value="email">Email</option>
+                    <option value="business_card">Business Card</option>
+                    <option value="conversation">In-Person Conversation</option>
+                    <option value="profile">Profile Link</option>
+                    <option value="custom">Custom</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="campaign">Campaign (What's the context?) <em style="color: #999;">- Optional</em></label>
+                <input type="text" id="campaign" placeholder="e.g., senior_sde_search, q1_2026_applications, tech_conference_2026">
+            </div>
+
+            <div class="form-group">
+                <label for="customId">Custom ID (Specific identifier) <em style="color: #999;">- Optional</em></label>
+                <input type="text" id="customId" placeholder="e.g., google_application, recruiter_jane, contact_001">
+                <small style="color: #666; font-size: 12px;">This helps you identify specific users/companies who clicked your link</small>
+            </div>
+
+            <div class="form-group">
+                <label for="notes">Notes (for your reference) <em style="color: #999;">- Optional</em></label>
+                <input type="text" id="notes" placeholder="e.g., Applied for Senior SDE role at Google">
+            </div>
+
+            <button type="submit" class="btn">Generate Tracking Link</button>
+            <button type="button" class="btn btn-secondary" onclick="clearForm()">Clear Form</button>
+        </form>
+
+        <div id="result" style="display: none;">
+            <h3>Your Tracking Link:</h3>
+            <div class="generated-url" id="generatedUrl"></div>
+            <button class="btn" onclick="copyToClipboard()">📋 Copy Link</button>
+            <button class="btn btn-secondary" onclick="openLink()">🔗 Test Link</button>
+            <div id="copySuccess" style="display: none;" class="success">Link copied to clipboard!</div>
+        </div>
+
+        <div class="examples">
+            <h3>💡 Pro Tips</h3>
+            <ul>
+                <li>Use consistent naming conventions for better analytics</li>
+                <li>Create unique custom IDs for each company/recruiter</li>
+                <li>Check your Google Analytics dashboard regularly</li>
+                <li>Use the same link across multiple touchpoints (email signature, LinkedIn, etc.)</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const baseUrl = 'https://jai-dewani.github.io/resume/';
+        let generatedUrl = '';
+
+        document.getElementById('linkGenerator').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const source = document.getElementById('source').value;
+            const medium = document.getElementById('medium').value;
+            const campaign = document.getElementById('campaign').value;
+            const customId = document.getElementById('customId').value;
+            
+            // Build URL with parameters
+            const params = new URLSearchParams();
+            params.append('source', source);
+            params.append('medium', medium);
+            if (campaign) params.append('campaign', campaign);
+            if (customId) params.append('id', customId);
+            
+            generatedUrl = baseUrl + '?' + params.toString();
+            
+            document.getElementById('generatedUrl').textContent = generatedUrl;
+            document.getElementById('result').style.display = 'block';
+            document.getElementById('copySuccess').style.display = 'none';
+            
+            // Scroll to result
+            document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        function copyToClipboard() {
+            navigator.clipboard.writeText(generatedUrl).then(function() {
+                document.getElementById('copySuccess').style.display = 'block';
+                setTimeout(() => {
+                    document.getElementById('copySuccess').style.display = 'none';
+                }, 3000);
+            });
+        }
+
+        function openLink() {
+            window.open(generatedUrl, '_blank');
+        }
+
+        function clearForm() {
+            document.getElementById('linkGenerator').reset();
+            document.getElementById('result').style.display = 'none';
+        }
+
+        // Handle custom options
+        document.getElementById('source').addEventListener('change', function() {
+            if (this.value === 'custom') {
+                const customSource = prompt('Enter custom source:');
+                if (customSource) {
+                    const option = new Option(customSource, customSource);
+                    option.selected = true;
+                    this.add(option);
+                }
+            }
+        });
+
+        document.getElementById('medium').addEventListener('change', function() {
+            if (this.value === 'custom') {
+                const customMedium = prompt('Enter custom medium:');
+                if (customMedium) {
+                    const option = new Option(customMedium, customMedium);
+                    option.selected = true;
+                    this.add(option);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

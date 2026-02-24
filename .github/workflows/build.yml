@@ -13,6 +13,7 @@ on:
         paths:
             - "resume.tex"
             - "index.html"
+            - "link-generator.html"
             - ".github/workflows/**"
 
 jobs:

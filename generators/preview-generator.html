@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Preview Image Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .generator-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .preview-card {
+            width: 600px;
+            height: 315px;
+            margin: 20px auto;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .card-content {
+            text-align: center;
+            z-index: 2;
+            max-width: 400px;
+            padding: 20px;
+        }
+        
+        .card-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .card-subtitle {
+            font-size: 18px;
+            margin-bottom: 15px;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        .card-description {
+            font-size: 12px;
+            line-height: 1.4;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        .card-footer {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            opacity: 0.8;
+        }
+        
+        .card-logo {
+            font-size: 10px;
+            font-weight: 600;
+        }
+        
+        .card-url {
+            font-size: 9px;
+        }
+        
+        .decorative-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+        
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .circle1 {
+            width: 100px;
+            height: 100px;
+            top: -50px;
+            right: -50px;
+            transition: all 0.5s ease;
+        }
+        
+        .circle2 {
+            width: 75px;
+            height: 75px;
+            bottom: -37px;
+            left: -37px;
+            transition: all 0.5s ease;
+        }
+        
+        .circle3 {
+            width: 50px;
+            height: 50px;
+            top: 50px;
+            left: 50px;
+            transition: all 0.5s ease;
+        }
+        
+        .controls {
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+        
+        .btn:hover {
+            background: #5a67d8;
+        }
+        
+        .color-options {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .color-option {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 3px solid white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .color-option:hover {
+            transform: scale(1.1);
+        }
+        
+        .instructions {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="generator-container">
+        <h1>🎨 Resume Preview Image Generator</h1>
+        
+        <div class="instructions">
+            <h3>Instructions:</h3>
+            <ol>
+                <li>Customize the preview card below using the color options</li>
+                <li>Click "Download Preview Image" to save as PNG</li>
+                <li>Upload the image to your GitHub repository as "preview.png"</li>
+                <li>The meta tags in your HTML will automatically use this image for social sharing</li>
+            </ol>
+        </div>
+        
+        <div class="color-options">
+            <div class="color-option" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)" onclick="changeGradient('#667eea', '#764ba2')"></div>
+            <div class="color-option" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%)" onclick="changeGradient('#f093fb', '#f5576c')"></div>
+            <div class="color-option" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)" onclick="changeGradient('#4facfe', '#00f2fe')"></div>
+            <div class="color-option" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)" onclick="changeGradient('#43e97b', '#38f9d7')"></div>
+            <div class="color-option" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%)" onclick="changeGradient('#fa709a', '#fee140')"></div>
+            <div class="color-option" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)" onclick="changeGradient('#a8edea', '#fed6e3')"></div>
+            <div class="color-option" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)" onclick="changeGradient('#ff9a9e', '#fecfef')"></div>
+            <div class="color-option" style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%)" onclick="changeGradient('#2c3e50', '#34495e')"></div>
+        </div>
+        
+        <div class="preview-card" id="previewCard">
+            <div class="decorative-elements">
+                <div class="circle circle1"></div>
+                <div class="circle circle2"></div>
+                <div class="circle circle3"></div>
+            </div>
+            <div class="card-content">
+                <div class="card-title">Jai Kumar Dewani</div>
+                <div class="card-subtitle">Senior Software Design Engineer</div>
+                <div class="card-description">
+                    Carl Zeiss Vision Care R&D • C# • .NET • Angular<br>
+                    Specialized in Medical Device Software & Optometry Solutions
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="card-logo">💼 Resume</div>
+                <div class="card-url">jai-dewani.github.io/resume</div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button class="btn" onclick="downloadImage()">📥 Download Preview Image</button>
+            <button class="btn" onclick="regenerateCard()" style="background: #6c757d;">🔄 Refresh Design</button>
+        </div>
+        
+        <div class="instructions">
+            <h3>💡 Tips:</h3>
+            <ul>
+                <li>The image will be optimized for LinkedIn, Twitter, and Facebook sharing</li>
+                <li>Dimensions are 1200x630px - perfect for Open Graph standards</li>
+                <li>Choose colors that match your personal brand</li>
+                <li>The image will show when people share your resume link on social media</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function changeGradient(color1, color2) {
+            const card = document.getElementById('previewCard');
+            card.style.background = `linear-gradient(135deg, ${color1} 0%, ${color2} 100%)`;
+        }
+        
+        function regenerateCard() {
+            const card = document.getElementById('previewCard');
+            const circles = document.querySelectorAll('.circle');
+            
+            // Add a subtle animation effect
+            card.style.transform = 'scale(0.98)';
+            
+            setTimeout(() => {
+                // Randomize circle positions and properties
+                circles.forEach((circle, index) => {
+                    const opacity = Math.random() * 0.4 + 0.05;
+                    const rotation = Math.random() * 360;
+                    const scale = Math.random() * 0.5 + 0.8;
+                    
+                    circle.style.opacity = opacity;
+                    circle.style.transform = `rotate(${rotation}deg) scale(${scale})`;
+                    
+                    // Slightly randomize positions
+                    if (index === 0) { // circle1
+                        circle.style.top = Math.random() * 40 - 60 + 'px';
+                        circle.style.right = Math.random() * 40 - 60 + 'px';
+                    } else if (index === 1) { // circle2
+                        circle.style.bottom = Math.random() * 30 - 45 + 'px';
+                        circle.style.left = Math.random() * 30 - 45 + 'px';
+                    } else if (index === 2) { // circle3
+                        circle.style.top = Math.random() * 100 + 30 + 'px';
+                        circle.style.left = Math.random() * 100 + 30 + 'px';
+                    }
+                });
+                
+                // Reset card scale
+                card.style.transform = 'scale(1)';
+            }, 100);
+        }
+        
+        function downloadImage() {
+            // Create canvas
+            const card = document.getElementById('previewCard');
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Set canvas size to actual preview dimensions
+            canvas.width = 1200;
+            canvas.height = 630;
+            
+            // Create gradient background
+            const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+            const computedStyle = window.getComputedStyle(card);
+            const backgroundImage = computedStyle.backgroundImage;
+            
+            // Default to blue gradient if parsing fails
+            gradient.addColorStop(0, '#667eea');
+            gradient.addColorStop(1, '#764ba2');
+            
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Add decorative circles
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
+            ctx.beginPath();
+            ctx.arc(1100, 100, 100, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            ctx.beginPath();
+            ctx.arc(100, 530, 75, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            ctx.beginPath();
+            ctx.arc(200, 200, 50, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Add some extra decorative elements for visual interest
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.05)';
+            ctx.beginPath();
+            ctx.arc(800, 400, 60, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            ctx.beginPath();
+            ctx.arc(400, 100, 30, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            // Add text
+            ctx.fillStyle = 'white';
+            ctx.textAlign = 'center';
+            
+            // Title
+            ctx.font = 'bold 72px "Segoe UI", sans-serif';
+            ctx.fillText('Jai Kumar Dewani', canvas.width / 2, 200);
+            
+            // Subtitle
+            ctx.font = '36px "Segoe UI", sans-serif';
+            ctx.fillText('Senior Software Design Engineer', canvas.width / 2, 260);
+            
+            // Description
+            ctx.font = '24px "Segoe UI", sans-serif';
+            ctx.fillText('Carl Zeiss Vision Care R&D • C# • .NET • Angular', canvas.width / 2, 320);
+            ctx.fillText('Specialized in Medical Device Software & Optometry Solutions', canvas.width / 2, 360);
+            
+            // Footer
+            ctx.font = '20px "Segoe UI", sans-serif';
+            ctx.textAlign = 'left';
+            ctx.fillText('💼 Professional Resume', 40, 590);
+            
+            ctx.textAlign = 'right';
+            ctx.fillText('jai-dewani.github.io/resume', canvas.width - 40, 590);
+            
+            // Download
+            canvas.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'preview.png';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            });
+        }
+        
+        // Initialize with some randomization
+        regenerateCard();
+    </script>
+</body>
+</html>

@@ -35,6 +35,7 @@ jobs:
                   mkdir build 
                   cp *.pdf build/ 
                   cp index.html build/
+                  cp link-generator.html build/
                   
             - name: Git add
               run: git add resume.pdf

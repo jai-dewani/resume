@@ -96,7 +96,7 @@
 \newcommand{\newResumeSubheading}[2]{
 \vspace{-2pt}\item
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textbf{\small #2}
+      \textbf{#1} & {\small #2}
       % \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-7pt}
 }
@@ -104,7 +104,7 @@
 \newcommand{\resumeSubSubheading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
+      \textit{\small\textbf{#1}} & \textit{\small#2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -153,6 +153,12 @@
 \end{center}
 
 
+\section{Summary}
+Senior .NET engineer with 5 years in high-reliability, safety-critical software at Carl Zeiss. Strong foundations in systems design, concurrent programming, and CI/CD. Bringing the rigour of medical-device development to product engineering teams.
+
+
+ \vspace{-6pt}
+
 %-----------EXPERIENCE-----------
 \section{Experience}
 \resumeSubHeadingListStart
@@ -162,29 +168,41 @@
     % {Senior Software Design Engineer \quad | \quad Software Design Engineer \quad | \quad Software Engineer}{June 2021 -- Present}
     \vspace{-14pt}
     % Senior Software Design Engineer
-    \resumeSubSubheading{Senior Software Design Engineer}{Jan 2025 -- Present}
+    \resumeSubSubheading{Senior Software Design Engineer}{Jan 2026 -- Present}
     \resumeItemListStart
-        \resumeItem{Leading Refraction Unit architecture and feature roadmap, ensuring scalable long-term platform design.}
-        \resumeItem{Driving product–engineering alignment to deliver next-generation optometry solutions.}
-        \resumeItem{Authored medical-system integration documentation to streamline release processes and reduce cross-team ambiguity.}
+        \resumeItem{Leading Refraction Platform architecture and feature roadmap, ensuring extensible and scalable long-term platform design.}
+        % \resumeItem{Driving product–engineering alignment to deliver next-generation optometry solutions.}
+        \resumeItem{Built an async event-queue command-coalescing system to merge high-frequency user interactions, cutting hardware execution time by \textbf{90\%} and improving UX.}
+        \resumeItem{On-boarded developers to the Refraction Platform codebase, designing ramp-up guides and pairing sessions that reduced time-to-first commit from 6 weeks to 2.}
+        % \resumeItem{Authored medical-system integration documentation to streamline release processes and reduce cross-team ambiguity.}
     \resumeItemListEnd
 
     % Software Design Engineer
-    \resumeSubSubheading{Software Design Engineer}{July 2022 -- Dec 2024}
+    \resumeSubSubheading{Software Design Engineer}{July 2022 -- Dec 2025}
     \resumeItemListStart
-        \resumeItem{Led VISUCORE R1.1 delivery, coordinating cross-team technical decisions and workflows.}
-        \resumeItem{Owned migration of 15+ legacy .NET Framework 4.8 modules to .NET 8, reducing startup time by 22\% and improving security posture.}
-        \resumeItem{Built an event-queue command-coalescing system to merge high-frequency user interactions, cutting hardware execution time by 90\% and improving UX.}
-        \resumeItem{Built a C++ interop wrapper that stabilized hardware communication and reduced integration effort by 30\%.}
-        \resumeItem{Contributed to hiring processes for both early-career and experienced engineers, strengthening overall engineering capability.}
+        \resumeItem{Owned VISUCORE R1.1 delivery end-to-end, coordinating across \textbf{4 cross-functional teams} (software, testing, product, hardware).}
+        \resumeItem{Implemented hybrid encryption for token exchange with the Password Manager, enabling secure credential handling across Zeiss Vision devices in a \textbf{zero-trust environment}.}
+        \resumeItem{Designed versioned ASP.NET Core REST APIs with JWT authentication, backed by EF Core and MySQL, serving the Angular frontend for Password Manager System.}
+        \resumeItem{Designed the asynchronous Refraction module with mutual-exclusion and atomic command guarantees, improving workflow performance by \textbf{28\%} and reducing concurrency-related bugs.}
+        \resumeItem{Built a C++ interop wrapper that stabilized hardware communication and reduced integration effort by 35\%.}
+        \resumeItem{Applied SOLID principles and DI patterns during .NET 8 migration, decoupling \textbf{30+ modules} and improving startup time by \textbf{22\%} through lazy dependency resolution.}
+        \resumeItem{Built reusable Angular component library with RxJS-driven data streams and observable-based state management for real-time hardware measurement display.}
+        % \resumeItem{Owned migration of 30+ legacy .NET Framework 4.8 modules to .NET 8, reducing startup time by 22\% and improving security posture.}
+        % \resumeItem{Engineered a robust system restart notification, improving UX system observability and reliability.}
+        % \resumeItem{Designed and built reusable Angular component library using RxJS Observables for the VISUCORE refraction workflow UI, enforcing unidirectional data flow and reducing duplication across 8+ feature modules.}
+        % \resumeItem{Orchestrated the design of an asynchronous Refraction module, improving workflow performance by 28\%.}
+        % \resumeItem{Introduced lock-and-release mutual-exclusion atomic command execution guarantees, simplifying concurrent workflows and reducing developer cognitive load.}
     \resumeItemListEnd
 
     % Software Engineer
     \resumeSubSubheading{Software Engineer}{June 2021 -- June 2022}
     \resumeItemListStart
+        \resumeItem{Refactored legacy hardware command layer using the Command and Chain-of-Responsibility patterns, introducing atomic execution guarantees and eliminating race conditions across concurrent workflows.}
         \resumeItem{Improved engineering velocity by upgrading mocking infrastructure, cutting test runtime by 80\% and reducing reliance on 3rd-party services.}
-        \resumeItem{Drove alignment across software, hardware, and product teams to establish clean, extensible API contracts.}
         \resumeItem{Integrated gRPC for IPC between services, reducing coupling and enabling parallel development across modules.}
+        \resumeItem{Maintained and extended Azure DevOps CI/CD pipelines with MSBuild, SonarQube static analysis, and Blackduck dependency scanning gates, enforcing quality standards on every merge.}
+        % \resumeItem{Drove alignment across software, hardware, and product teams to establish clean, extensible API contracts}
+        
     \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -199,24 +217,19 @@
 
 
 %-----------PROJECTS-----------
-\section{Projects}
-    \resumeSubHeadingListStart
-        \newResumeSubheading
-            {\textbf{Password Manager System} $|$ \emph{C\#}}{Mar 2025 - Sep 2025}
-            \resumeItemListStart
-                \resumeItem{Extended Password Manager compatibility to VC500-connected VTS devices, enabling secure credential handling across the ecosystem.}
-                \resumeItem{Owned requirement clarification, solution design, and implementation across teams.}
-                \resumeItem{Engineered a robust restart notification framework, improving system observability and reliability.}
-            \resumeItemListEnd
-        \resumeProjectHeading
-            {\textbf{Subjective Refraction Platform} $|$ \emph{C\#, Angular}  $|$ \href{https://www.zeiss.com/vision-care/int/eye-care-professionals/equipment/refraction/combined-refraction-unit.html}{VISUCORE Product Page}}{Jan 2021 - Current}
-            \resumeItemListStart
-                \resumeItem{Owned the development of visual acuity testing module for market releases - R1 and R1.1}
-                \resumeItem{Orchestrated the design of an asynchronous Refraction module, improving workflow performance by 28\%.}
-                \resumeItem{Implemented lock-and-release mutual-exclusion mechanism, improving system stability.}
-                \resumeItem{Introduced atomic command execution guarantees, simplifying concurrent workflows and reducing developer cognitive load.}
-            \resumeItemListEnd
-    \resumeSubHeadingListEnd
+% \section{Projects}
+%     \resumeSubHeadingListStart
+%         \newResumeSubheading
+%             {\textbf{Password Manager System} $|$ \emph{C\#}}{Mar 2025 - Sep 2025}
+%             \resumeItemListStart
+
+%             \resumeItemListEnd
+%         \resumeProjectHeading
+%             {\textbf{Subjective Refraction Platform} $|$ \emph{C\#, Angular}  $|$ \href{https://www.zeiss.com/vision-care/int/eye-care-professionals/equipment/refraction/combined-refraction-unit.html}{VISUCORE Product Page}}{Jan 2021 - Current}
+%             \resumeItemListStart
+
+%             \resumeItemListEnd
+%     \resumeSubHeadingListEnd
 
 %
 %-----------PROGRAMMING SKILLS-----------
@@ -225,7 +238,7 @@
     {\item{
      \textbf{Languages}{: C\#, Python, JavaScript, TypeScript } \\
      \vspace{1pt}
-     \textbf{Frameworks}{: .NET 8, .NET Framework, ASP.NET, WPF, NUnit, Node.js, gRPC, Angular, React} \\
+     \textbf{Frameworks}{: .NET 8, .NET Framework, ASP.NET, WPF, NUnit, gRPC, Angular} \\
      \vspace{1pt}
      \textbf{Developer Tools}{: Azure, MSBuild, MySQL, SonarQube, Blackduck, IRIUS Risk, Docker, GitHub Actions, CI/CD} \\
     }}
@@ -237,9 +250,9 @@
 %-----------INVOLVEMENT---------------
 \section{Achievements}
 \begin{itemize}[leftmargin=0.2in]
-  \achievementItem{Recognized with the \textbf{Ownership Spirit} award (2025 Zeiss offsite) for leading resolution of high-impact system-blocking customer issues.}
-  \achievementItem{Speaker at FOSS Conference on how Zeiss leverages and contributes to open-source frameworks.}
-  \achievementItem{Contributed to open-source projects including Excalidraw and Microsoft PowerToys.}
+  \achievementItem{Recognized with \textbf{Ownership Spirit} award 2025 for leading resolution of high-impact customer blocking issues.}
+  \achievementItem{Speaker at FOSS Conference on Zeiss's open-source strategy; presented gRPC adoption patterns to Zeiss-wide developer audience via internal Community of Practice.}
+  \achievementItem{Contributed to open-source projects including \textit{Excalidraw} and \textit{Microsoft PowerToys}.}
   \achievementItem{Mentored and judged 100+ teams at national hackathons including HackCBS, HackOn, and DotSlash.}
   \achievementItem{Qualified \textbf{ACM ICPC Regionals} (Top 100 Nationwide across 2019–2020).}
 \end{itemize}
